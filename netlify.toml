@@ -10,11 +10,12 @@
   # Functions directory (if you add serverless functions later)
   # functions = "netlify/functions"
 
-# Redirect rules for React Router (SPA)
+# Redirect rules for React Router (SPA) - CRITICAL for routing to work
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+  force = true
 
 # Headers for security and performance
 [[headers]]
