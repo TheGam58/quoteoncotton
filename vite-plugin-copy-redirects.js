@@ -1,10 +1,8 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+// Vite plugin to ensure _redirects file is copied to dist
 import { copyFileSync, existsSync } from 'fs';
 import { join } from 'path';
 
-// Plugin to ensure _redirects is copied to dist
-const copyRedirects = () => {
+export default function copyRedirects() {
   return {
     name: 'copy-redirects',
     closeBundle() {
@@ -14,16 +12,9 @@ const copyRedirects = () => {
       if (existsSync(src)) {
         copyFileSync(src, dest);
         console.log('✓ Copied _redirects to dist');
+      } else {
+        console.warn('⚠ _redirects file not found in public folder');
       }
     }
   };
-};
-
-// https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react(), copyRedirects()],
-  optimizeDeps: {
-    exclude: ['lucide-react'],
-  },
-  publicDir: 'public',
-});
+}
