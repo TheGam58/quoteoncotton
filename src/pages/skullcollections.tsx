@@ -3,7 +3,6 @@ import { useNavigate, Link } from 'react-router-dom';
 import Navigation from '../componets/Navigation';
 import { useCart } from '../Context/CartContext';
 import { ShoppingBag, ArrowLeft, Star } from 'lucide-react';
-import skull1 from '../assets/Skull_1.jpg';
 
 interface SkullStyle {
   id: string;
@@ -16,7 +15,7 @@ const SKULL_STYLES: SkullStyle[] = [
   {
     id: 'classic',
     name: 'Classic Skull',
-    image: skull1,
+    image: 'Skull_1.jpg',
     description: 'Timeless skull design with bold lines and traditional aesthetics'
   },
   {
