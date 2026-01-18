@@ -118,7 +118,7 @@ export default function SkullCollections() {
                       <button
                         key={style.id}
                         onClick={() => setSelectedStyle(style)}
-                        className={`rounded-lg overflow-hidden border-2 transition ${
+                        className={`block w-full rounded-lg overflow-hidden border-2 transition ${
                           selectedStyle.id === style.id
                             ? 'border-[#141b1f]'
                             : 'border-gray-300'
