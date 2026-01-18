@@ -277,9 +277,9 @@ export default function SkullCollections() {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-            {SKULL_STYLES.map(style => (
+            {SKULL_STYLES.map(style => (  
               <div key={style.id} className="group">
-                <div className="relative aspect-square overflow-hidden rounded-lg cursor-pointer bg-white mb-4 shadow-lg hover:shadow-2xl transition">
+                <div className="relative w-full aspect-square overflow-hidden rounded-lg cursor-pointer bg-white mb-4 shadow-lg hover:shadow-2xl transition">
                   <img
                     src={style.image}
                     alt={style.name}
