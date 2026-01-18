@@ -14,9 +14,9 @@ export default function About() {
                 contemporary design.
               </p>
               <p>
-                Each piece is crafted from sustainably sourced cotton and features unique, trendy designs that
-                let you express yourself. We're committed to ethical production practices and creating fashion
-                that's as good for the planet as it is for your wardrobe.
+                Committed to sustainability, we use eco-friendly materials and ethical practices.
+                By choosing our products, you support a brand that values fashion and the environment.
+                Explore our collection to find pieces that reflect your personality and values.
               </p>
               <p className="font-semibold">
                 Wear your values. Make a statement. Choose Quote on Cotton.
@@ -39,3 +39,4 @@ export default function About() {
     </section>
   );
 }
+  
