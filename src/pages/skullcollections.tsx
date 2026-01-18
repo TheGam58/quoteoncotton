@@ -16,7 +16,7 @@ const SKULL_STYLES: SkullStyle[] = [
   {
     id: 'classic',
     name: 'Classic Skull',
-    image: '/Skull_1.jpg',
+    image: skull1,
     description: 'Timeless skull design with bold lines and traditional aesthetics'
   },
   {
