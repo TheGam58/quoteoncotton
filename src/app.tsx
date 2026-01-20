@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { CartProvider } from './Context/CartContext';
 import Home from './pages/home';
-import ExploreDesigns from './pages/exploredesigns';
 import CollectionDetail from './pages/collectiondetail';
 import Cart from './pages/cart';
 import Checkout from './pages/checkout';

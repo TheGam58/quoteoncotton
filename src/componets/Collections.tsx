@@ -77,7 +77,7 @@ export default function Collections() {
                 <p className="text-gray-300 mb-4">{collection.description}</p>
                 <div className="flex items-center gap-2 bg-[#fce08b] text-[#141b1f] px-6 py-2 rounded-full font-semibold hover:bg-white transition w-fit">
                   <ShoppingBag size={18} />
-                  <span>EXPLORE NOW</span>
+                  <span>SHOP NOW</span>
                 </div>
               </div>
             </Link>

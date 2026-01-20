@@ -22,7 +22,7 @@ export default function Hero() {
             onClick={() => scrollToSection('collections')}
             className="bg-[#fce08b] text-[#141b1f] px-12 py-4 rounded-full text-lg font-semibold uppercase tracking-wider hover:bg-white transition transform hover:scale-105"
           >
-            Explore Designs
+            View Collections
           </button>
         </div>
       </div>

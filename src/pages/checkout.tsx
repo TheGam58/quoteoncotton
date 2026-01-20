@@ -33,7 +33,7 @@ export default function Checkout() {
             <h1 className="text-5xl md:text-6xl font-bold text-[#141b1f] mb-6">CHECKOUT</h1>
             <p className="text-xl text-[#283034] mb-12">Your cart is empty</p>
             <Link
-              to="/explore"
+              to="/Home"
               className="inline-flex items-center gap-2 bg-[#141b1f] text-white px-8 py-4 rounded-lg font-bold uppercase tracking-wider hover:bg-[#283034] transition"
             >
               <ArrowLeft size={20} />
