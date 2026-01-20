@@ -53,6 +53,15 @@ const HOODIE_STYLES: HoodieStyle[] = [
 const SIZES = ['XS', 'S', 'M', 'L', 'XL', 'XXL'];
 const COLORS = ['Black', 'White', 'Gray', 'Navy', 'Charcoal', 'Forest Green'];
 
+const COLOR_MAP: { [key: string]: string } = {
+  'Black': '#000000',
+  'White': '#FFFFFF',
+  'Gray': '#808080',
+  'Navy': '#000080',
+  'Charcoal': '#36454F',
+  'Forest Green': '#228B22'
+};
+
 export default function Hoodies() {
   const navigate = useNavigate();
   const { addToCart } = useCart();
@@ -104,12 +113,18 @@ export default function Hoodies() {
 
             <div className="grid md:grid-cols-2 gap-12 mb-20">
               <div>
-                <div className="bg-white rounded-lg overflow-hidden shadow-lg mb-6">
+                <div className="bg-white rounded-lg overflow-hidden shadow-lg mb-6 relative">
                   <img
                     src={selectedStyle.image}
                     alt={selectedStyle.name}
                     className="w-full h-96 object-cover"
                   />
+                  {selectedColor !== 'Black' && (
+                     <div 
+                       className="absolute inset-0 pointer-events-none mix-blend-color opacity-40"
+                       style={{ backgroundColor: COLOR_MAP[selectedColor]}}
+                     />
+                  )}
                 </div>
                 <div className="bg-white rounded-lg p-6 shadow-lg">
                   <h3 className="font-bold text-lg text-[#141b1f] mb-3">Style Gallery</h3>

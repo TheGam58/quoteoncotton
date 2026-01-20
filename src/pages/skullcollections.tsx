@@ -4,6 +4,16 @@ import Navigation from '../componets/Navigation';
 import { useCart } from '../Context/CartContext';
 import { ShoppingBag, ArrowLeft, Star } from 'lucide-react';
 import skull1 from '../assets/Skull_1.jpg';
+import skull2 from '../assets/Skull_2.jpg';
+import skull3 from '../assets/Skull_3.jpg';
+import skull4 from '../assets/Skull_4.jpg';
+import skull5 from '../assets/Skull_5.jpg';
+import skull6 from '../assets/Skull_6.jpg';
+import skull7 from '../assets/Skull_7.jpg';
+import skull8 from '../assets/Skull_8.jpg';
+import skull9 from '../assets/Skull_9.jpg';
+import skull10 from '../assets/Skull_10.jpg';
+import skull11 from '../assets/Skull_11.jpg';
 
 interface SkullStyle {
   id: string;
@@ -22,37 +32,52 @@ const SKULL_STYLES: SkullStyle[] = [
   {
     id: 'artistic',
     name: 'Artistic Skull',
-    image: 'https://images.pexels.com/photos/8532617/pexels-photo-8532617.jpeg?auto=compress&cs=tinysrgb&w=1000',
+    image: skull2,
     description: 'Artistic interpretation with flowing patterns and detailed elements'
   },
   {
     id: 'modern',
     name: 'Modern Skull',
-    image: 'https://images.pexels.com/photos/1598507/pexels-photo-1598507.jpeg?auto=compress&cs=tinysrgb&w=1000',
+    image: skull3,
     description: 'Contemporary minimalist skull with clean, sharp lines'
   },
   {
     id: 'gothic',
     name: 'Gothic Skull',
-    image: 'https://images.pexels.com/photos/5870363/pexels-photo-5870363.jpeg?auto=compress&cs=tinysrgb&w=1000',
+    image: skull4,
     description: 'Dark, moody gothic style with intricate details and shadows'
   },
   {
     id: 'geometric',
     name: 'Geometric Skull',
-    image: 'https://images.pexels.com/photos/3622622/pexels-photo-3622622.jpeg?auto=compress&cs=tinysrgb&w=1000',
+    image: skull5,
     description: 'Abstract geometric skull with mathematical precision'
   },
   {
     id: 'vintage',
     name: 'Vintage Skull',
-    image: 'https://images.pexels.com/photos/2889438/pexels-photo-2889438.jpeg?auto=compress&cs=tinysrgb&w=1000',
+    image: skull6,
+    description: 'Retro-inspired design with aged texture and classic appeal'
+  },
+  {  
+    id: 'Bikers',
+    name: 'Bikers Skull',
+    image: skull7,
     description: 'Retro-inspired design with aged texture and classic appeal'
   }
 ];
 
 const SIZES = ['XS', 'S', 'M', 'L', 'XL', 'XXL'];
 const COLORS = ['Black', 'White', 'Navy', 'Gray', 'Red', 'Dark Green'];
+
+const COLOR_MAP: { [key: string]: string } = {
+  'Black': '#000000',
+  'White': '#FFFFFF',
+  'Navy': '#000080',
+  'Gray': '#808080',
+  'Red': '#FF0000',
+  'Dark Green': '#006400'
+};
 
 export default function SkullCollections() {
   const navigate = useNavigate();

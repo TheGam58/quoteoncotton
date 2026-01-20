@@ -55,7 +55,7 @@ export default function Checkout() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.firstName || !formData.lastName || !formData.email || !formData.phone ||
         !formData.address || !formData.city || !formData.state || !formData.pincode ||
@@ -63,7 +63,36 @@ export default function Checkout() {
       alert('Please fill in all fields');
       return;
     }
-    setOrderPlaced(true);
+
+    // Prepare data for Netlify Form submission
+    const orderItems = cart.map(item => 
+      `${item.product_title} (x${item.quantity}) - ₹${item.price * item.quantity}`
+    ).join('\n');
+
+    const formBody = new FormData();
+    formBody.append('form-name', 'order');
+    formBody.append('firstName', formData.firstName);
+    formBody.append('lastName', formData.lastName);
+    formBody.append('email', formData.email);
+    formBody.append('phone', formData.phone);
+    formBody.append('address', formData.address);
+    formBody.append('city', formData.city);
+    formBody.append('state', formData.state);
+    formBody.append('pincode', formData.pincode);
+    formBody.append('orderItems', orderItems);
+    formBody.append('totalAmount', `₹${total}`);
+
+    try {
+      await fetch('/', {
+        method: 'POST',
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formBody as any).toString(),
+      });
+      setOrderPlaced(true);
+    } catch (error) {
+      console.error('Form submission failed:', error);
+      alert('There was an error placing your order. Please try again.');
+    }
   };
 
   if (orderPlaced) {
