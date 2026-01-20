@@ -135,7 +135,7 @@ export default function Checkout() {
                   Back to Home
                 </button>
                 <button
-                  onClick={() => navigate('/explore')}
+                  onClick={() => navigate('/')}
                   className="w-full bg-white text-[#141b1f] py-4 rounded-lg font-bold uppercase tracking-wider border-2 border-[#141b1f] hover:bg-gray-100 transition text-lg"
                 >
                   Continue Shopping

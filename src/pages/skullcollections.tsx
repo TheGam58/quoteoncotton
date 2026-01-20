@@ -130,11 +130,11 @@ export default function SkullCollections() {
 
             <div className="grid md:grid-cols-2 gap-12 mb-20">
               <div>
-                <div className="bg-white rounded-lg overflow-hidden shadow-lg mb-6">
+                <div className="bg-white rounded-lg overflow-hidden shadow-lg mb-6 group cursor-pointer">
                   <img
                     src={selectedStyle.image}
                     alt={selectedStyle.name}
-                    className="w-full h-96 object-cover"
+                    className="w-full h-96 object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>
                 <div className="bg-white rounded-lg p-6 shadow-lg">
@@ -290,9 +290,9 @@ export default function SkullCollections() {
 
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <Link to="/explore" className="inline-flex items-center gap-2 text-[#fce08b] hover:text-white transition mb-8 font-semibold">
+          <Link to="/" className="inline-flex items-center gap-2 text-[#fce08b] hover:text-white transition mb-8 font-semibold">
             <ArrowLeft size={20} />
-            Back to Explore
+            Back to Home
           </Link>
 
           <div className="text-center mb-16">

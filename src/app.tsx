@@ -15,7 +15,6 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/explore" element={<ExploreDesigns />} />
           <Route path="/collection/:id" element={<CollectionDetail />} />
           <Route path="/skull-collections" element={<SkullCollections />} />
           <Route path="/hoodies" element={<Hoodies />} />

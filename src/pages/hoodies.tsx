@@ -279,9 +279,9 @@ export default function Hoodies() {
 
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <Link to="/explore" className="inline-flex items-center gap-2 text-[#fce08b] hover:text-white transition mb-8 font-semibold">
+          <Link to="/" className="inline-flex items-center gap-2 text-[#fce08b] hover:text-white transition mb-8 font-semibold">
             <ArrowLeft size={20} />
-            Back to Explore
+            Back to Home
           </Link>
 
           <div className="text-center mb-16">
