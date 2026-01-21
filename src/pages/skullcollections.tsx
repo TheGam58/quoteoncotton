@@ -64,20 +64,36 @@ const SKULL_STYLES: SkullStyle[] = [
     name: 'Bikers Skull',
     image: skull7,
     description: 'Retro-inspired design with aged texture and classic appeal'
-  }
+  },
+  {
+    id: 'Futuristic',
+    name: 'Futuristic Skull',
+    image: skull8,
+    description: 'Retro-inspired design with aged texture and classic appeal'
+  },
+  {
+    id: 'Space',
+    name: 'Space Skull',
+    image: skull9,
+    description: 'Retro-inspired design with aged texture and classic appeal'
+  },
+  {
+    id: 'Retro',
+    name: 'Retro Skull',
+    image: skull10,
+    description: 'Retro-inspired design with aged texture and classic appeal'
+  },
+  {
+    id: 'Minimalist',
+    name: 'Minimalist Skull',
+    image: skull11,
+    description: 'Retro-inspired design with aged texture and classic appeal'
+  },
 ];
 
 const SIZES = ['XS', 'S', 'M', 'L', 'XL', 'XXL'];
 const COLORS = ['Black', 'White', 'Navy', 'Gray', 'Red', 'Dark Green'];
 
-const COLOR_MAP: { [key: string]: string } = {
-  'Black': '#000000',
-  'White': '#FFFFFF',
-  'Navy': '#000080',
-  'Gray': '#808080',
-  'Red': '#FF0000',
-  'Dark Green': '#006400'
-};
 
 export default function SkullCollections() {
   const navigate = useNavigate();
