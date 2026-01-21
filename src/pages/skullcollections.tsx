@@ -94,7 +94,7 @@ const SKULL_STYLES: SkullStyle[] = [
 const SIZES = ['XS', 'S', 'M', 'L', 'XL', 'XXL'];
 const COLORS = ['Black', 'White', 'Navy', 'Gray', 'Red', 'Dark Green'];
 
-
+ 
 export default function SkullCollections() {
   const navigate = useNavigate();
   const { addToCart } = useCart();
