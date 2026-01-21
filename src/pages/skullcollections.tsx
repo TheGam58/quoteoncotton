@@ -150,29 +150,35 @@ export default function SkullCollections() {
                   <img
                     src={selectedStyle.image}
                     alt={selectedStyle.name}
+                    onError={(e) => {
+                      console.error(`Image failed to load: ${selectedStyle.image}`);
+                      e.currentTarget.src = 'https://via.placeholder.com/400?text=Image+Load+Error';
+                    }}
                     className="w-full h-96 object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>
                 <div className="bg-white rounded-lg p-6 shadow-lg">
                   <h3 className="font-bold text-lg text-[#141b1f] mb-3">Style Gallery</h3>
-                  <div className="grid grid-cols-3 gap-3">
-                    {SKULL_STYLES.map(style => (
-                      <button
-                        key={style.id}
-                        onClick={() => setSelectedStyle(style)}
-                        className={`block w-full rounded-lg overflow-hidden border-2 transition ${
-                          selectedStyle.id === style.id
-                            ? 'border-[#141b1f]'
-                            : 'border-gray-300'
-                        }`}
-                      >
-                        <img
-                          src={style.image}
-                          alt={style.name}
-                          className="w-full h-20 object-cover"
-                        />
-                      </button>
-                    ))}
+                  <div className="max-h-[400px] overflow-y-auto pr-2 custom-scrollbar">
+                    <div className="grid grid-cols-3 gap-3">
+                      {SKULL_STYLES.map(style => (
+                        <button
+                          key={style.id}
+                          onClick={() => setSelectedStyle(style)}
+                          className={`block w-full rounded-lg overflow-hidden border-2 transition ${
+                            selectedStyle.id === style.id
+                              ? 'border-[#141b1f]'
+                              : 'border-gray-300'
+                          }`}
+                        >
+                          <img
+                            src={style.image}
+                            alt={style.name}
+                            className="w-full h-20 object-cover"
+                          />
+                        </button>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
