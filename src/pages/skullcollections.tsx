@@ -13,7 +13,7 @@ import skull7 from '../assets/Skull_7.jpg';
 import skull8 from '../assets/Skull_8.jpg';
 import skull9 from '../assets/Skull_9.jpg';
 import skull10 from '../assets/Skull_10.jpg';
-import skull11 from '../assets/Skull_11.jpg';
+import skull11 from '../assets/Skull_11.png';
 
 interface SkullStyle {
   id: string;
