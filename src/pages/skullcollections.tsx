@@ -159,7 +159,7 @@ export default function SkullCollections() {
                 </div>
                 <div className="bg-white rounded-lg p-6 shadow-lg">
                   <h3 className="font-bold text-lg text-[#141b1f] mb-3">Style Gallery</h3>
-                  <div className="max-h-[400px] overflow-y-auto pr-2 custom-scrollbar">
+                  <div className="max-h-[400px] overflow-y-auto pr-2">
                     <div className="grid grid-cols-3 gap-3">
                       {SKULL_STYLES.map(style => (
                         <button
