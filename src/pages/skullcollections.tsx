@@ -109,7 +109,7 @@ export default function SkullCollections() {
       product_id: `skull-${selectedStyle.id}`,
       product_title: `${selectedStyle.name} - ${selectedSize}/${selectedColor}`,
       collection: 'skull',
-      price: 700,
+      price: 600,
       quantity: 1,
       image: selectedStyle.image,
     });
@@ -123,7 +123,7 @@ export default function SkullCollections() {
       product_id: `skull-${selectedStyle.id}`,
       product_title: `${selectedStyle.name} - ${selectedSize}/${selectedColor}`,
       collection: 'skull',
-      price: 700,
+      price: 600,
       quantity: 1,
       image: selectedStyle.image,
     });
@@ -238,7 +238,7 @@ export default function SkullCollections() {
 
                     <div className="flex justify-between items-center pt-4 border-t border-gray-200">
                       <span className="text-lg font-semibold text-[#141b1f]">Price</span>
-                      <span className="text-3xl font-bold text-[#fce08b]">₹700</span>
+                      <span className="text-3xl font-bold text-[#fce08b]">₹600</span>
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="text-lg font-semibold text-[#141b1f]">Material</span>
@@ -344,7 +344,7 @@ export default function SkullCollections() {
                   </div>
                 </div>
                 <h3 className="font-bold text-white text-lg text-center mb-2">{style.name}</h3>
-                <p className="text-center text-[#fce08b] font-bold text-xl">₹700</p>
+                <p className="text-center text-[#fce08b] font-bold text-xl">₹600</p>
               </div>
             ))}
           </div>
@@ -353,3 +353,4 @@ export default function SkullCollections() {
     </div>
   );
 }
+
