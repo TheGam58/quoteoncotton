@@ -86,7 +86,13 @@ export default function Checkout() {
       await fetch('/', {
         method: 'POST',
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formBody as any).toString(),
+        body: (() => {
+          const params = new URLSearchParams();
+          for (const [key, value] of formBody.entries()) {
+            params.append(key, String(value));
+          }
+          return params.toString();
+        })(),
       });
       setOrderPlaced(true);
     } catch (error) {

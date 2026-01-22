@@ -150,10 +150,6 @@ export default function SkullCollections() {
                   <img
                     src={selectedStyle.image}
                     alt={selectedStyle.name}
-                    onError={(e) => {
-                      console.error(`Image failed to load: ${selectedStyle.image}`);
-                      e.currentTarget.src = 'https://via.placeholder.com/400?text=Image+Load+Error';
-                    }}
                     className="w-full h-96 object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>
