@@ -353,4 +353,5 @@ export default function SkullCollections() {
     </div>
   );
 }
+// Nothing to replace – the selection was empty.
 
