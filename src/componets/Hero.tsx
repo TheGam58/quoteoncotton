@@ -6,8 +6,16 @@ export default function Hero() {
   }
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-b from-[#141b1f] to-[#283034] text-white pt-24">
-      <div className="flex items-center justify-center min-h-screen px-6">
+    <div className="relative min-h-screen bg-[#141b1f] text-white pt-24">
+      <div className="absolute inset-0">
+        <img
+          src="https://images.pexels.com/photos/8532616/pexels-photo-8532616.jpeg?auto=compress&cs=tinysrgb&w=1600"
+          alt="Hero background"
+          className="w-full h-full object-cover opacity-30"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-transparent" />
+      </div>
+      <div className="relative flex items-center justify-center min-h-screen px-6">
         <div className="text-center max-w-5xl">
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight mb-6">
             QUOTE ON COTTON

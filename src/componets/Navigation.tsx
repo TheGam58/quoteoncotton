@@ -18,9 +18,9 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-20 p-6 bg-gradient-to-b from-black/50 to-transparent">
+    <nav className="fixed top-0 left-0 right-0 z-20 p-4 bg-[#141b1f]/70 backdrop-blur">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <Link to="/" className="text-xl font-bold tracking-wider text-white hover:text-[#fce08b] transition">
+        <Link to="/" className="text-2xl font-bold tracking-wider text-white hover:text-[#fce08b] transition">
           QUOTE ON COTTON
         </Link>
 
@@ -58,7 +58,7 @@ export default function Navigation() {
       </div>
 
       {isMenuOpen && (
-        <div className="md:hidden mt-6 bg-[#283034] rounded-lg p-6 space-y-4">
+        <div className="md:hidden mt-4 bg-[#283034] rounded-lg p-4 space-y-4">
           {isHome ? (
             <>
               <button onClick={() => scrollToSection('about')} className="block w-full text-left uppercase text-sm tracking-wider text-white hover:text-[#fce08b] transition">About</button>
